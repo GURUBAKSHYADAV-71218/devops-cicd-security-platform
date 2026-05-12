@@ -3,14 +3,14 @@ name: DevOps Pipeline
 on:
   push:
     branches:
-      - development
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout Code
         uses: actions/checkout@v3
 
       - name: Build
@@ -20,8 +20,8 @@ jobs:
         run: echo "Running Tests"
 
       - name: Security Validation
-        run: echo "Security Scan"
+        run: echo "Security Scan Complete"
 
-      - name: Deployment
-        run: echo "Deploying Application"
+      - name: Deploy
+        run: echo "Deployment Successful"
 Save.
