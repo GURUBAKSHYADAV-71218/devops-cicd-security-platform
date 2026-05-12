@@ -1,0 +1,27 @@
+name: DevOps Pipeline
+
+on:
+  push:
+    branches:
+      - development
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Build
+        run: echo "Building Application"
+
+      - name: Test
+        run: echo "Running Tests"
+
+      - name: Security Validation
+        run: echo "Security Scan"
+
+      - name: Deployment
+        run: echo "Deploying Application"
+Save.
